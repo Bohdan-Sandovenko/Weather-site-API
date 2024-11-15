@@ -1,0 +1,25 @@
+main {
+    @media screen and (min-width: $layout-breakpoint_medium) {
+        .all_weather_values {
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            p {
+                width: 45%;
+            }
+        }
+    }
+
+    @media screen and (min-width: $layout-breakpoint-large) {
+        .all_weather_values {
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            p {
+                width: 30%;
+            }
+        }
+    }
+}

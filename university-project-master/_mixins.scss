@@ -1,0 +1,21 @@
+@mixin box ($bg-color, $padd, $color, $txt-align, $width) {
+    background-color: $bg-color;
+    padding: $padd;
+    color: $color;
+    text-align: $txt-align;
+    width: $width;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

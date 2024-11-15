@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Aplication</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class="head">
+            <h1>Weather Aplication</h1>
+        </section>
+        <section class="search">
+            <input type="text" name="" id="" placeholder="podaj nazwe miasta" class="input">
+            <button>Sprawdż pogodę</button>
+            <p class="error"></p>
+        </section>
+    </header>
+    <main>
+        <section class="weather">
+            <h2 class="city_name"></h2>
+            <div class="weather_info">
+                <div class="temp_info">
+                    <img src="" alt="" class="weather_img">
+                    <p class="temp"></p>
+                </div>
+                <p class="description"></p>
+            </div>
+            <div class="all_weather_values">
+                
+                    <p>Temperatura odczuwalna: <span class="feels_like"></span></p>
+                
+                
+                    <p>Ciśnienie: <span class="pressure"></span></p>
+                
+                
+                    <p>Wilgotnosć <span class="humidity"></span></p>
+                
+                
+                    <p>Prędkość wiatru <span class="wind_speed"></span></p>
+                
+                
+                    <p>Zachmurzenie <span class="clouds"></span></p>
+                
+                
+                    <p>Widoczność <span class="visibility"></span></p>
+                
+            </div>
+        </section>
+        <section class="pollution">
+            <h3>Zanieczszczenie powietrza</h3>
+            <div class="polluton_info">
+                <img src="./img/pm25.png" alt="" class="v ">
+                <p class="pollution_value"></p><!--bedzie pusta na strone-->
+                <p>&micro;g/m <sup>3</sup></p>
+            </div>
+        </section>
+    </main>
+    <footer>Project</footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

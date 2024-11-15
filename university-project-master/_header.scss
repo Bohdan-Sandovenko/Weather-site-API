@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font;
+    min-height: 100%;
+    @include flex-column;
+
+    header {
+        @include box ($third-color, 25px, $second-color, center, 100%);
+
+        .head {
+            h1 {
+                font-family: "Roboto", serif;
+                margin-bottom: 20px;
+                color: black;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 20px;
+            }
+
+        }
+
+        .search {
+            input {
+                padding: 10px;
+            }
+
+            button {
+                background-color: black;
+                padding: 10px;
+                color: white;
+            }
+
+            div {
+                @include flex-column;
+
+                * {
+                    display: block;
+                    width: 50%;
+                    height: 25px;
+                }
+
+            }
+        }
+    }
+}

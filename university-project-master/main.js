@@ -37,15 +37,15 @@ function getWeatherInfo() {//Функция выполняюшая запрос 
 
         cityName.textContent = `${response.data.name}, ${response.data.sys.country}`;
         weatherImg.src = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
-        temp.textContent = `${Math.floor(response.data.main.temp)}`;
-        description.textContent = `${response.data.main.description}`;
+        temp.textContent = `${Math.floor(response.data.main.temp)}°`;
+        description.textContent = `${response.data.weather[0].description}`;
         description.classList.add('description');
-        feelslike.textContent = `${Math.floor(response.data.main.feels_like)} `;
-        pressure.textContent = `${response.data.main.pressure}`;
-        humidity.textContent = `${response.data.main.humidity} `;
+        feelslike.textContent = `${Math.floor(response.data.main.feels_like)}°`;
+        pressure.textContent = `${response.data.main.pressure}hPa`;
+        humidity.textContent = `${response.data.main.humidity}%`;
         windSpeed.textContent = `${Math.floor(response.data.wind.speed * 3,6)}`;
         clouds.textContent = `${response.data.clouds.all}%`;
-        visibility.textContent = `${response.data.visibility / 1000}`;
+        visibility.textContent = `${response.data.visibility / 1000}km`;
         errorMsg.textContent = '';
 
         //air pollution api 

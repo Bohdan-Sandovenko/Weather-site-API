@@ -1,6 +1,22 @@
 @import 'nullstyles.css';
+body {
+  background: linear-gradient(90deg, #05159E 0%, #84D3FF 50%, #D7FDFF 100%);
+}
+body main {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(5, 21, 158, 0.2) 100%);
+  padding: 50px;
+}
+body main .weather {
+  line-height: 1.7;
+}
+body main .weather .city_name {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #fff;
+}
 @media screen and (min-width: 768px) {
-  main .all_weather_values {
+  body main .weather .all_weather_values {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -8,12 +24,12 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  main .all_weather_values p {
+  body main .weather .all_weather_values p {
     width: 45%;
   }
 }
 @media screen and (min-width: 992px) {
-  main .all_weather_values {
+  body main .weather .all_weather_values {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -21,9 +37,30 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  main .all_weather_values p {
+  body main .weather .all_weather_values p {
     width: 30%;
   }
+}
+body main .weather .temp_info .temp {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+}
+body main .weather .description {
+  font-family: "Inter", sans-serif;
+  font-weight: medium;
+  font-size: 16px;
+  color: white;
+}
+body main .weather .all_weather_values {
+  font-family: "Inter", sans-serif;
+  font-weight: medium;
+  font-size: 16px;
+  color: white;
+}
+body main .pollution .polluton_info .v {
+  margin: 15px 0px;
 }
 
 * {
@@ -46,22 +83,30 @@ body header {
   color: #48484a;
   text-align: center;
   width: 100%;
+  background: linear-gradient(90deg, #05159E 0%, #84D3FF 50%, #D7FDFF 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
 }
 body header .head h1 {
   font-family: "Roboto", serif;
   margin-bottom: 20px;
-  color: black;
-  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 0px 2px black;
+  font-weight: 900;
   font-style: normal;
-  font-size: 20px;
+  font-size: 30px;
 }
 body header .search input {
   padding: 10px;
+  border-radius: 10px 0px 0px 10px;
 }
 body header .search button {
-  background-color: black;
+  background-color: rgb(62, 151, 233);
   padding: 10px;
   color: white;
+  border-radius: 0px 12px 12px 0px;
+  font-family: "Roboto", serif;
 }
 body header .search div {
   display: flex;
@@ -88,33 +133,6 @@ footer p {
 footer p span {
   color: #e96e50;
   font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
-  main .all_weather_values {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  main .all_weather_values p {
-    width: 45%;
-  }
-}
-@media screen and (min-width: 992px) {
-  main .all_weather_values {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  main .all_weather_values p {
-    width: 30%;
-  }
 }
 
 /*.body {

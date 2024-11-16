@@ -1,24 +1,87 @@
-main {
-    @media screen and (min-width: $layout-breakpoint_medium) {
-        .all_weather_values {
-            @include flex-row;
-            flex-wrap: wrap;
-            justify-content: center;
+$opacity: 5%;
 
-            p {
-                width: 45%;
+body {
+    background: $background-gradient;
+
+    main {
+
+        background: linear-gradient(45deg,
+                /* Угол наклона градиента */
+                rgba(255, 255, 255, 0.2) 0%,
+                /* Полупрозрачный белый цвет на 0% */
+                rgba(5, 21, 158, 0.2) 100%
+                /* Полупрозрачный синий цвет на 100% */
+            );
+        padding: 50px;
+
+
+
+        .weather {
+            line-height: 1.7;
+
+            .city_name {
+                font-family: "Inter", sans-serif;
+                font-weight: bold;
+                font-size: 32px;
+                color: #fff;
             }
+
+            @media screen and (min-width: $layout-breakpoint_medium) {
+                .all_weather_values {
+                    @include flex-row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    p {
+                        width: 45%;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $layout-breakpoint-large) {
+                .all_weather_values {
+                    @include flex-row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    p {
+                        width: 30%;
+                    }
+                }
+            }
+
+            .temp_info {
+                .weather_img {}
+
+                .temp {
+                    font-family: "Inter", sans-serif;
+                    font-weight: bold;
+                    font-size: 32px;
+                    color: white;
+                }
+            }
+
+            .description {
+                font-family: "Inter", sans-serif;
+                font-weight: medium;
+                font-size: 16px;
+                color: white;
+            }
+
+            .all_weather_values {
+                font-family: "Inter", sans-serif;
+                font-weight: medium;
+                font-size: 16px;
+                color: white;
+            }
+
         }
-    }
 
-    @media screen and (min-width: $layout-breakpoint-large) {
-        .all_weather_values {
-            @include flex-row;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            p {
-                width: 30%;
+        .pollution {
+            .polluton_info {
+                .v {
+                    margin: 15px 0px;
+                }
             }
         }
     }
